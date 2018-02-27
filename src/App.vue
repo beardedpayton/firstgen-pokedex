@@ -33,6 +33,12 @@ h4 {
 h1 {
   font-size: 42px;
 }
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 28px;
+}
 h4 {
   font-size: 20px;
 }
