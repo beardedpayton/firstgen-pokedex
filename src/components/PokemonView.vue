@@ -3,56 +3,9 @@
     <v-layout>
       <v-flex xs6 offset-xs3>
         <div class="poke-card">
-          <v-layout row wrap>
-          <v-flex xs12>
-            <h1>{{pokeData.name}} &dash; {{'#' + pokeData.id}}</h1>
-            <img :src="pokeData.sprites.front_default">
-            <hr>
-          </v-flex>
-          <v-flex xs6>
-            <ul>
-              <li>Height: {{pokeData.height}}</li>
-              <li>Weight: {{pokeData.weight}}</li>
-            </ul>
-          </v-flex>
-          <v-flex xs6>
-            <ul class="type-abilities">
-              <li>
-                Type:
-                <span v-for="type in pokeData.types" :key="type.slot">
-                  {{type.type.name}}
-                </span>
-              </li>
-              <li>
-                Abilities:
-                <span v-for="ability in pokeData.abilities" :key="ability.name">
-                  {{ability.ability.name}}
-                </span>
-              </li>
-            </ul>
-          </v-flex>
-          <v-flex xs12>
-            <div class="stats-wrapper">
-              <h3>Stats</h3>
-              <hr>
-              <div class="stats" v-for="stat in pokeData.stats" :key="stat.stat.name">
-                <span class="stat-name">{{stat.stat.name}}</span>
-                <span class="stat-number"><div class="stat-bar">{{stat.base_stat}}</div></span>
-              </div>
-            </div>
-          </v-flex>
-          <v-flex xs12>
-            <div class="moves-wrapper">
-              <h3>Moves</h3>
-              <hr>
-              <div v-for="move in pokeData.moves" :key="move.move.name">
-                <v-flex xs6>
-                  <p>{{move.move.name}}</p>
-                </v-flex>
-              </div>
-            </div>
-          </v-flex>
-          </v-layout>
+          <profile :profile="pokeData" />
+          <stats :pokeStats="pokeData.stats" />
+          <moves :pokeMoves="pokeData.moves" />
         </div>
       </v-flex>
     </v-layout>
@@ -61,6 +14,9 @@
 
 <script>
 import PokeService from '@/services/PokeService'
+import Profile from '@/components/Profile'
+import Stats from '@/components/Stats'
+import Moves from '@/components/Moves'
 
 export default {
   data () {
@@ -71,6 +27,11 @@ export default {
   async mounted () {
     const id = this.$route.params.id
     this.pokeData = (await PokeService.stats(id)).data
+  },
+  components: {
+    Profile,
+    Stats,
+    Moves
   }
 }
 </script>
