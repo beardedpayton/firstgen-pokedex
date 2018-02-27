@@ -1,4 +1,4 @@
-# hero-finder
+# First Generation Pokedex
 
 > A Vue.js project
 
