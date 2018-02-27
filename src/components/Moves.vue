@@ -3,11 +3,9 @@
     <div class="moves-wrapper">
       <h3>Moves</h3>
       <hr>
-      <div v-for="move in pokeMoves" :key="move.move.name">
-        <v-flex xs6>
-          <p>{{move.move.name}}</p>
-        </v-flex>
-      </div>
+      <v-flex xs6 v-for="move in pokeMoves" :key="move.move.name">
+        <p>{{move.move.name}}</p>
+      </v-flex>
     </div>
   </v-flex>
 </template>
