@@ -4,14 +4,31 @@
       <v-flex xs6 offset-xs3>
         <div class="poke-card">
           <v-layout row wrap>
-          <v-flex xs6>
-          <h1>{{pokeData.name}}</h1>
-          <img :src="pokeData.sprites.front_default">
+          <v-flex xs12>
+            <h1>{{pokeData.name}} &dash; {{'#' + pokeData.id}}</h1>
+            <img :src="pokeData.sprites.front_default">
+            <hr>
           </v-flex>
           <v-flex xs6>
             <ul>
-              <li>Weight: {{pokeData.weight}}</li>
               <li>Height: {{pokeData.height}}</li>
+              <li>Weight: {{pokeData.weight}}</li>
+            </ul>
+          </v-flex>
+          <v-flex xs6>
+            <ul>
+              <li>
+                Type:
+                <span v-for="type in pokeData.types" :key="type.slot">
+                  {{type.type.name}}/
+                </span>
+              </li>
+              <li>
+                Abilities:
+                <span v-for="ability in pokeData.abilities" :key="ability.name">
+                  {{ability.ability.name}}/
+                </span>
+              </li>
             </ul>
           </v-flex>
           <v-flex xs12>
