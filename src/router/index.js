@@ -25,7 +25,7 @@ export default new Router({
       component: Register
     },
     {
-      path: 'pokemon/:id',
+      path: '/pokemon/:id',
       name: 'pokemon-view',
       component: PokemonView
     }
