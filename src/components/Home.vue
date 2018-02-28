@@ -5,7 +5,7 @@
         <v-flex v-for="poke in pokemon" :key="poke.id" xs2>
           <router-link :to="{name: 'pokemon-view', params: {id: poke.id}}">
             <div class="pokeWrapper">
-              <h4>{{ poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}}</h4>
+              <h4>{{ poke.name }} - {{'#' + poke.id}}</h4>
               <img :src="poke.link" :alt="poke.name + '--' + 'image'">
             </div>
           </router-link>
@@ -18,6 +18,7 @@
 <script>
 import PokeService from '@/services/PokeService'
 import Data from '@/pokemon.js'
+// import PokemonData from '@/pokemon.json'
 export default {
   name: 'Home',
   data () {

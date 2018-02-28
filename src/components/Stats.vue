@@ -13,7 +13,7 @@
           </span>
         </div>
       </div>
-</v-flex>
+    </v-flex>
   </v-layout>
 </template>
 
@@ -22,7 +22,21 @@ export default {
   name: 'Stats',
   props: [
     'pokeStats'
-  ]
+  ],
+  data () {
+    return {
+      statValue: this.pokeStats
+    }
+  },
+  mounted () {
+    const statBar = document.querySelectorAll('.stat-bar-bg')
+    const setWidth = (element) => {
+      for (let i = 0; i < this.statValue.length; i++) {
+        element[i].style.width = (this.statValue[i].base_stat / 2) + '%'
+      }
+    }
+    setWidth(statBar)
+  }
 }
 </script>
 
@@ -43,7 +57,6 @@ export default {
 .stat-bar-bg{
   background-color: green;
   color: #fff;
-  width: 20%;
 }
 .stat-number,
 .stat-name {

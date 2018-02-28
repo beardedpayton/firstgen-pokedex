@@ -58,12 +58,6 @@ li {
 img {
   padding-bottom: 25px;
 }
-.type-abilities span {
-  background: #eee;
-  border: 1px solid #000;
-  margin-right: 4px;
-  padding: 3px;
-}
 .stats-wrapper h3,
 .moves-wrapper h3 {
   text-align: left;
