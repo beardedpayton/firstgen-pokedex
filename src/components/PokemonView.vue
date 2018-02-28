@@ -55,9 +55,6 @@ ul {
 li {
   padding-bottom: 10px;
 }
-.stat-name {
-  text-transform: uppercase;
-}
 img {
   padding-bottom: 25px;
 }
@@ -69,20 +66,6 @@ img {
 }
 .stats-wrapper h3,
 .moves-wrapper h3 {
-  text-align: left;
-}
-.stats {
-  padding-top: 15px;
-}
-.stat-bar {
-  height: 20px;
-  background-color: #eee;
-  width: 50%;
-  float: right;
-  padding-left: 10px;
-}
-.stat-number,
-.stat-name {
   text-align: left;
 }
 </style>

@@ -6,7 +6,11 @@
         <hr>
         <div class="stats" v-for="stat in pokeStats" :key="stat.stat.name">
           <span class="stat-name">{{stat.stat.name}}</span>
-          <span class="stat-number"><div class="stat-bar">{{stat.base_stat}}</div></span>
+          <span class="stat-bar">
+            <div class="stat-bar-bg">
+              {{stat.base_stat}}
+            </div>
+          </span>
         </div>
       </div>
 </v-flex>
@@ -22,6 +26,27 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.stat-name {
+  text-transform: uppercase;
+}
+.stats {
+  padding-top: 15px;
+}
+.stat-bar {
+  position: relative;
+  height: 20px;
+  background-color: #eee;
+  width: 300px;
+  float: right;
+}
+.stat-bar-bg{
+  background-color: green;
+  color: #fff;
+  width: 20%;
+}
+.stat-number,
+.stat-name {
+  text-align: left;
+}
 </style>

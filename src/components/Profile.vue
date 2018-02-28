@@ -40,5 +40,10 @@ export default {
 </script>
 
 <style>
-
+.type-abilities span {
+  background: #eee;
+  border: 1px solid #000;
+  margin: 0 4px 5px 0;
+  padding: 3px;
+}
 </style>
