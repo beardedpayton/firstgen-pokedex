@@ -22,7 +22,7 @@ export default {
 <style>
 #app {
   font-family: 'Roboto', sans-serif;
-  background-color: #fff;
+  background-color: #F2F2F2;
 }
 h1,
 h2,
@@ -43,6 +43,6 @@ h4 {
   font-size: 20px;
 }
 section {
-  padding: 75px 0;
+  padding: 50px 0;
 }
 </style>

@@ -5,7 +5,7 @@
         <v-flex v-for="poke in pokemon" :key="poke.id" xs2>
           <router-link :to="{name: 'pokemon-view', params: {id: poke.id}}">
             <div class="pokeWrapper">
-              <h4>{{ poke.name }} - {{'#' + poke.id}}</h4>
+              <h4>{{ poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}} - {{'#' + poke.id}}</h4>
               <img :src="poke.link" :alt="poke.name + '--' + 'image'">
             </div>
           </router-link>
@@ -39,12 +39,14 @@ export default {
 
 <style scoped>
 .pokeWrapper {
+  width: 75%;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 4px 8px #cecece;
+  border-radius: 7px;
   text-align: center;
-  border: 1px dotted #000;
   margin-bottom: 50px;
   padding-top: 20px;
-  width: 75%;
-  box-shadow: 4px 7px #eee;
-  color: #000;
+  
 }
 </style>

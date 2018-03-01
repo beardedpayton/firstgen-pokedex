@@ -38,12 +38,14 @@ export default {
 
 <style>
 .poke-card {
-  height: 600px;
+  height: 700px;
   overflow: scroll;
-  border: 3px solid black;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 6px 12px #e2e2e2;
+  border-radius: 7px;
   padding: 25px;
   text-align: center;
-  box-shadow: 5px 10px #eee;
 }
 h1 {
   text-transform: uppercase;
