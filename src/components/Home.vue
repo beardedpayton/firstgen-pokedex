@@ -18,7 +18,7 @@
 <script>
 import PokeService from '@/services/PokeService'
 import Data from '@/pokemon.js'
-// import PokemonData from '@/pokemon.json'
+
 export default {
   name: 'Home',
   data () {
@@ -47,6 +47,5 @@ export default {
   text-align: center;
   margin-bottom: 50px;
   padding-top: 20px;
-  
 }
 </style>

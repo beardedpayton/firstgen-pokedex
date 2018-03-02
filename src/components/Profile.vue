@@ -3,24 +3,23 @@
   <v-flex xs12>
     <h1>{{profile.name}} &dash; {{'#' + profile.id}}</h1>
     <img :src="profile.sprites.front_default">
-    <hr>
   </v-flex>
   <v-flex xs6>
     <ul>
-      <li>Height: {{profile.height}}</li>
-      <li>Weight: {{profile.weight}}</li>
+      <li><b>Height:</b> {{profile.height}}</li>
+      <li><b>Weight:</b> {{profile.weight}}</li>
     </ul>
   </v-flex>
   <v-flex xs6>
     <ul class="type-abilities">
       <li>
-        Type:
+        <b>Type:</b>
         <span v-for="type in profile.types" :key="type.slot">
           {{type.type.name}}
         </span>
       </li>
       <li>
-        Abilities:
+        <b>Abilities:</b>
         <span v-for="ability in profile.abilities" :key="ability.name">
           {{ability.ability.name}}
         </span>

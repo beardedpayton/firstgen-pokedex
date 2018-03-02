@@ -51,7 +51,7 @@ export default {
   position: relative;
   height: 20px;
   background-color: #eee;
-  width: 300px;
+  width: 55%;
   float: right;
 }
 .stat-bar-bg{
