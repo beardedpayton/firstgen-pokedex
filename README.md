@@ -1,6 +1,6 @@
 # First Generation Pokedex
 
-> A Vue.js project
+This project is a first generation Pokedex web application built with Vue.js! The purpose of this project is to showcase how to build a client-side web app with Vue.js and access data from a third party API. 
 
 ## Build Setup
 
@@ -10,12 +10,7 @@ npm install
 
 # serve with hot reload at localhost:8080
 npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
+## Credits
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Thank you [PokeAPI](https://pokeapi.co/) for providing endpoints for the data. 
